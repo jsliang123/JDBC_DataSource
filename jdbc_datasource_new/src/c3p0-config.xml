@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<c3p0-config>
+    <default-config>
+        <!--这个文件直接放在src下面-->
+        <property name="driverClass">com.mysql.jdbc.Driver</property>
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/test</property>
+        <property name="user">root</property>
+        <property name="password">root</property>
+
+    </default-config>
+
+    <!-- This app is massive! -->
+    <named-config name="intergalactoApp">
+        <property name="acquireIncrement">50</property>
+        <property name="initialPoolSize">100</property>
+        <property name="minPoolSize">50</property>
+        <property name="maxPoolSize">1000</property>
+
+    </named-config>
+</c3p0-config>
